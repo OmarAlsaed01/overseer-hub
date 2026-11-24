@@ -1,0 +1,41 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "overseer-hub",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-20",
+  // global_fetch_strictly_public is required for Client ID Metadata Documents (CIMD).
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    // The URL MCP clients connect to; every token is bound to it.
+    "MCP_RESOURCE": "https://overseer-hub.omaralsaed.workers.dev/mcp"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "overseer-hub",
+      "database_id": "4a8d7f15-0f1e-4a16-8a6d-168c4714eadb",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "59352953b6a04ba4a822f8a4c7f7d8a3"
+    }
+  ],
+  "observability": { "enabled": true },
+  "dev": { "port": 8788 },
+  "secrets": {
+    "required": [
+      "ACCESS_CLIENT_ID",
+      "ACCESS_CLIENT_SECRET",
+      "ACCESS_TOKEN_URL",
+      "ACCESS_AUTHORIZATION_URL",
+      "ACCESS_JWKS_URL",
+      "COOKIE_ENCRYPTION_KEY",
+      "ALLOWED_EMAIL"
+    ]
+  }
+}

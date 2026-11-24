@@ -1,0 +1,7 @@
+ACCESS_CLIENT_ID=<"Client ID" from the Access SaaS app>
+ACCESS_CLIENT_SECRET=<"Client secret" from the Access SaaS app>
+ACCESS_TOKEN_URL=<"Token endpoint" from the Access SaaS app>
+ACCESS_AUTHORIZATION_URL=<"Authorization endpoint" from the Access SaaS app>
+ACCESS_JWKS_URL=<"Key endpoint" from the Access SaaS app>
+COOKIE_ENCRYPTION_KEY=<random hex, 32 bytes>
+ALLOWED_EMAIL=<the one email allowed to use the probe>

@@ -1,0 +1,21 @@
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+exports/
+dumps/
+*.dump.sql
+
+# Local notes and the throwaway probe; not part of the public repo.
+probe/
+Overseer Hub V0 Claude Code kickoff.md
+duet-handoff-prompt.md
+docs/test-first-report.md
+
+wrangler.bootstrap.jsonc
